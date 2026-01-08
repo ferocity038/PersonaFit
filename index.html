@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Persona Fit</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="https://png.pngtree.com/png-vector/20190114/ourmid/pngtree-vector-shop-icon-png-image_313451.jpg">
+  </head>
+  <body class="loading">
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+      <div class="loading-logo">Persona Fit</div>
+      <div class="loading-spinner"></div>
+      <div class="loading-text" id="loadingText">
+        Loading your fashion experience...
+      </div>
+      <div class="loading-progress">
+        <div class="loading-progress-bar" id="loadingProgress"></div>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <a href="#" class="logo">Persona Fit</a>
+
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="search-container">
+          <button class="search-btn" id="searchToggle">
+            <i class="fas fa-search"></i>
+            <span>Search</span>
+          </button>
+          <div class="search-box" id="searchBox">
+            <input
+              type="text"
+              class="search-input"
+              id="searchInput"
+              placeholder="Search products..."
+            />
+            <div class="search-results" id="searchResults"></div>
+          </div>
+        </div>
+
+        <button class="theme-toggle" id="themeToggle">
+          <i class="fas fa-moon"></i>
+          <span>Dark</span>
+        </button>
+
+        <button class="btn-outline" id="cartBtn">
+          <i class="fas fa-shopping-bag"></i>
+          <span>Cart</span>
+          <span class="cart-count">0</span>
+        </button>
+
+        <button class="language-switcher" id="languageToggle">
+          <i class="fas fa-language"></i>
+          <span id="languageText">EN</span>
+        </button>
+
+        <div class="mobile-menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1 class="hero-title">Design Today, <span>Style Tomorrow</span></h1>
+        <p class="hero-description">
+          Discover how you can express your true personality with our unique
+          clothing. A blend of modern design, high quality, and bold color
+          palette.
+        </p>
+        <button class="btn-primary" id="exploreBtn">
+          <span>Explore Collections</span>
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+
+      <div class="hero-image">
+        <div
+          style="
+            width: 100%;
+            height: 500px;
+            background: linear-gradient(
+              45deg,
+              var(--peach-light) 0%,
+              var(--pink-accent) 100%
+            );
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+          "
+        >
+          <div style="text-align: center; padding: 2rem">
+            <i
+              class="fas fa-tshirt"
+              style="font-size: 4rem; margin-bottom: 1rem"
+            ></i>
+            <p>Featured Brand Products</p>
+          </div>
+        </div>
+      </div>
+
+      <a href="#features" class="scroll-down">
+        Discover More
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <h2 class="section-title">Discover <span>Our Brand</span></h2>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3>Innovative Design Philosophy</h3>
+          <p>
+            At MODERN, we believe fashion is more than clothing—it's personal
+            expression. Our design team blends artistic vision with practical
+            comfort, creating pieces that tell your unique story while providing
+            unparalleled fit and feel.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <h3>Sustainable & Ethical Production</h3>
+          <p>
+            We're committed to responsible fashion. From organic cotton to
+            recycled materials, every garment is crafted with environmental
+            consciousness and ethical manufacturing practices, ensuring both
+            style and sustainability.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-tag"></i>
+          </div>
+          <h3>Accessible Luxury</h3>
+          <p>
+            Experience premium quality without the premium price tag. Our
+            direct-to-consumer model eliminates unnecessary markups, bringing
+            you luxury fabrics, expert craftsmanship, and timeless designs at
+            honest prices.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+      <h2 class="section-title">Our <span>Collections</span></h2>
+
+      <div class="products-grid">
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="background-color: var(--cyan-light)"
+          >
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.5rem;
+              "
+            >
+              <i class="fas fa-tshirt" style="font-size: 5rem"></i>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Men's Clothing</div>
+            <h3 class="product-title">Modern Graphic Hoodie</h3>
+            <div class="product-price">$49.99</div>
+            <button
+              class="add-to-cart-btn"
+              data-product="Modern Graphic Hoodie"
+              data-price="49.99"
+            >
+              <i class="fas fa-shopping-cart"></i>
+              <span>Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="background-color: var(--pink-accent)"
+          >
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.5rem;
+              "
+            >
+              <i class="fas fa-female" style="font-size: 5rem"></i>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Women's Clothing</div>
+            <h3 class="product-title">Chrome Knit Jacket</h3>
+            <div class="product-price">$62.00</div>
+            <button
+              class="add-to-cart-btn"
+              data-product="Chrome Knit Jacket"
+              data-price="62.00"
+            >
+              <i class="fas fa-shopping-cart"></i>
+              <span>Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="background-color: var(--orange-primary)"
+          >
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.5rem;
+              "
+            >
+              <i class="fas fa-vest" style="font-size: 5rem"></i>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Accessories</div>
+            <h3 class="product-title">Modern Knit Hat</h3>
+            <div class="product-price">$23.00</div>
+            <button
+              class="add-to-cart-btn"
+              data-product="Modern Knit Hat"
+              data-price="23.00"
+            >
+              <i class="fas fa-shopping-cart"></i>
+              <span>Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="background-color: var(--cyan-light)"
+          >
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.5rem;
+              "
+            >
+              <i class="fas fa-tshirt" style="font-size: 5rem"></i>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Men's Clothing</div>
+            <h3 class="product-title">Premium Cotton T-Shirt</h3>
+            <div class="product-price">$29.99</div>
+            <button
+              class="add-to-cart-btn"
+              data-product="Premium Cotton T-Shirt"
+              data-price="29.99"
+            >
+              <i class="fas fa-shopping-cart"></i>
+              <span>Add to Cart</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <div
+            class="product-image"
+            style="background-color: var(--pink-accent)"
+          >
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 1.5rem;
+              "
+            >
+              <i class="fas fa-female" style="font-size: 5rem"></i>
+            </div>
+          </div>
+          <div class="product-info">
+            <div class="product-category">Women's Clothing</div>
+            <h3 class="product-title">Designer Silk Dress</h3>
+            <div class="product-price">$89.99</div>
+            <button
+              class="add-to-cart-btn"
+              data-product="Designer Silk Dress"
+              data-price="89.99"
+            >
+              <i class="fas fa-shopping-cart"></i>
+              <span>Add to Cart</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="about">
+      <h2 class="cta-title">Join Our Fashion Revolution</h2>
+      <p class="cta-subtitle">
+        Be part of a movement that celebrates individuality, sustainability, and
+        exceptional design. Subscribe to get exclusive access to new
+        collections, members-only discounts, and style insights from our
+        designers.
+      </p>
+      <button class="btn-cta" id="newsletterBtn">
+        <span>Subscribe to Newsletter</span>
+        <i class="fas fa-envelope"></i>
+      </button>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">Persona Fit</div>
+          <p class="footer-description">
+            Redefining contemporary fashion through innovative design,
+            sustainable practices, and uncompromising quality. We create
+            clothing that empowers self-expression while respecting our planet.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Our Brand</a></li>
+            <li><a href="#products">Collections</a></li>
+            <li><a href="#about">Join Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">Size Guide</a></li>
+            <li><a href="#">Shipping Information</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Support Center</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>123 Fashion Street, New York, NY 10001</span>
+            </li>
+            <li><i class="fas fa-phone"></i> <span>+1 (212) 555-1234</span></li>
+            <li>
+              <i class="fas fa-envelope"></i> <span>hello@PersonaFit.com</span>
+            </li>
+            <li>
+              <i class="fas fa-clock"></i> <span>Mon-Fri: 9AM-6PM EST</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2026 Persona Fit Fashion Brand. All rights reserved. | Crafted with passion
+        for exceptional design.
+      </div>
+    </footer>
+
+    <script src="./scrpit.js"></script>
+  </body>
+</html>
