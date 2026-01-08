@@ -1090,7 +1090,7 @@ body.rtl .notification {
   }
 
   .hero-title {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .hero-image {
@@ -1134,7 +1134,7 @@ body.rtl .notification {
 
 @media (max-width: 768px) {
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .cta-title {
@@ -1181,3 +1181,4 @@ body.rtl .notification {
     left: 10px;
   }
 }
+
